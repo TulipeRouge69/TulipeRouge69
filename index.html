@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>TulipeRouge69 - Ma chaîne Twitch</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <div class="top-banner">
+        <div class="burger">
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+        </div>
+        TulipeRouge69
+    </div>
+
+    <header>
+        <p>Gaming • Divertissement • Communauté</p>
+        <p><strong>viewers actuellement en ligne :</strong></p>
+
+        <a class="btn" href="https://www.twitch.tv/TulipeRouge69" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968819.png" alt="Twitch"> Suivre sur Twitch
+        </a>
+        <a class="btn discord" href="https://discord.gg/FfvmxWk7" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/3670/3670157.png" alt="Discord"> Rejoindre le Discord
+        </a>
+    </header>
+
+    <section class="content">
+        <h2>Statut de la chaîne</h2>
+        <div class="stats">
+            <div class="card"><strong>Followers</strong><br>3</div>
+            <div class="card"><strong>Viewers moyens</strong><br>4</div>
+            <div class="card"><strong>Heures streamées</strong><br>Inconnu</div>
+        </div>
+
+        <h2>Planning des streams</h2>
+        <div class="planning">
+            <div class="card"><strong>Lundi</strong><br><br></div>
+            <div class="card"><strong>Mardi</strong><br>17h<br>Minecraft</div>
+            <div class="card"><strong>Mercredi</strong><br><br></div>
+            <div class="card"><strong>Jeudi</strong><br>17h<br>Fortnite</div>
+            <div class="card"><strong>Vendredi</strong><br><br></div>
+            <div class="card"><strong>Samedi</strong><br><br></div>
+        </div>
+    </section>
+
+    <footer>© 2025 TulipeRouge69</footer>
+
+    <script>
+        const images = document.querySelectorAll('.carousel-img');
+        let current = 0;
+        function rotateBanner() {
+            images.forEach((img, i) => img.classList.toggle('active', i === current));
+            current = (current + 1) % images.length;
+        }
+        rotateBanner();
+        setInterval(rotateBanner, 5000);
+    </script>
+
+</body>
+</html>
