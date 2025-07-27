@@ -106,4 +106,33 @@ footer {
 .btn.youtube:hover {
     background: #a3201c;
 }
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 220px;
+    height: 100%;
+    background-color: #1b1b3a;
+    color: white;
+    padding-top: 60px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.side-menu ul li {
+    padding: 15px 20px;
+    border-bottom: 1px solid #333;
+}
+.side-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.side-menu.show {
+    left: 0;
+}
 
