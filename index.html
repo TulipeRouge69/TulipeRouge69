@@ -64,13 +64,24 @@
 
     <footer>© 2025 TulipeRouge69</footer>
 
-    <!-- Script pour menu -->
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById('sideMenu');
-            menu.classList.toggle('show');
+
+ <script>
+    function toggleMenu() {
+        const menu = document.getElementById('sideMenu');
+        menu.classList.toggle('show');
+    }
+
+    // Fermer le menu quand on clique en dehors
+    document.addEventListener("click", function (event) {
+        const menu = document.getElementById('sideMenu');
+        const burger = document.querySelector('.burger');
+        const isClickInside = menu.contains(event.target) || burger.contains(event.target);
+        if (!isClickInside) {
+            menu.classList.remove('show');
         }
-    </script>
+    });
+</script>
+
 
 </body>
 </html>
