@@ -67,6 +67,12 @@ header h1 {
 .btn.youtube:hover {
     background: #a3201c;
 }
+.btn.twitter {
+    background: #1DA1F2;
+}
+.btn.twitter:hover {
+    background: #0d8ddb;
+}
 .stats, .planning {
     display: flex;
     justify-content: center;
