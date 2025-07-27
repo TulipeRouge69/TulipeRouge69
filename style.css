@@ -69,6 +69,7 @@ header h1 {
 }
 .btn.twitter {
     background: #1DA1F2;
+    padding: 12px 24px; /* même padding que les autres */
 }
 .btn.twitter:hover {
     background: #0d8ddb;
