@@ -75,6 +75,17 @@
             }
         });
     </script>
+    <script>
+    const days = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
+    const today = new Date().getDay(); // 0 = dimanche, 1 = lundi, ...
+    const cards = document.querySelectorAll('.planning .card');
+
+    cards.forEach(card => {
+        if (card.textContent.includes(days[today])) {
+            card.classList.add('active-day');
+        }
+    });
+</script>
 
 </body>
 </html>
