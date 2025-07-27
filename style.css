@@ -101,8 +101,9 @@ footer {
     background: #111;
 }
 .btn.youtube {
-    background: #FF0000;
+    background: #c4302b;
 }
 .btn.youtube:hover {
-    background: #cc0000;
+    background: #a3201c;
 }
+
