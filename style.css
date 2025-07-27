@@ -118,3 +118,8 @@ footer {
 .side-menu.show {
     left: 0;
 }
+.card.active-day {
+    background-color: #6c47ff;
+    color: white;
+    font-weight: bold;
+}
