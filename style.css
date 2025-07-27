@@ -100,3 +100,9 @@ footer {
     font-size: 0.8em;
     background: #111;
 }
+.btn.youtube {
+    background: #FF0000;
+}
+.btn.youtube:hover {
+    background: #cc0000;
+}
