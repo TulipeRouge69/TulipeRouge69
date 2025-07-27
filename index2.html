@@ -10,10 +10,7 @@
     <!-- Menu latéral caché -->
     <div class="side-menu" id="sideMenu">
         <ul>
-            <li><a href="#twitch">Twitch</a></li>
-            <li><a href="#discord">Discord</a></li>
-            <li><a href="#youtube">YouTube</a></li>
-            <li><a href="#planning">Planning</a></li>
+            <li><a href="#">Accueil</a></li>
         </ul>
     </div>
 
@@ -64,17 +61,18 @@
 
     <footer>© 2025 TulipeRouge69</footer>
 
+    <!-- Script pour menu -->
     <script>
         function toggleMenu() {
             const menu = document.getElementById('sideMenu');
             menu.classList.toggle('show');
         }
 
-        document.addEventListener("click", function (event) {
+        // Fermer le menu si on clique en dehors
+        document.addEventListener('click', function(event) {
             const menu = document.getElementById('sideMenu');
             const burger = document.querySelector('.burger');
-            const isClickInside = menu.contains(event.target) || burger.contains(event.target);
-            if (!isClickInside) {
+            if (!menu.contains(event.target) && !burger.contains(event.target)) {
                 menu.classList.remove('show');
             }
         });
