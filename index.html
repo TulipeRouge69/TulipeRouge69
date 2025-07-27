@@ -1,1 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>TulipeRouge69 - Ma chaîne Twitch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <!-- Menu latéral caché -->
+    <div class="side-menu" id="sideMenu">
+        <ul>
+            <li><a href="#">Accueil</a></li>
+        </ul>
+    </div>
+
+    <!-- Bandeau haut avec bouton burger -->
+    <div class="top-banner">
+        <div class="burger" onclick="toggleMenu()">
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+        </div>
+        TulipeRouge69
+    </div>
+
+    <header>
+        <p>Gaming • Divertissement • Communauté</p>
+        <p><strong>viewers actuellement en ligne :</strong></p>
+
+        <a class="btn" id="twitch" href="https://www.twitch.tv/TulipeRouge69" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968819.png" alt="Twitch"> Suivre sur Twitch
+        </a>
+        <a class="btn discord" id="discord" href="https://discord.gg/FfvmxWk7" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/3670/3670157.png" alt="Discord"> Rejoindre le Discord
+        </a>
+        <a class="btn youtube" id="youtube" href="https://www.youtube.com/@TulipeRouge69" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"> Ma chaîne YouTube
+        </a>
+    </header>
+
+    <section class="content" id="planning">
+        <h2>Statut de la chaîne</h2>
+        <div class="stats">
+            <div class="card"><strong>Followers</strong><br>3</div>
+            <div class="card"><strong>Viewers moyens</strong><br>4</div>
+            <div class="card"><strong>Heures streamées</strong><br>Inconnu</div>
+        </div>
+
+        <h2>Planning des streams</h2>
+        <div class="planning">
+            <div class="card"><strong>Lundi</strong><br><br></div>
+            <div class="card"><strong>Mardi</strong><br>17h<br>Minecraft</div>
+            <div class="card"><strong>Mercredi</strong><br><br></div>
+            <div class="card"><strong>Jeudi</strong><br>17h<br>Fortnite</div>
+            <div class="card"><strong>Vendredi</strong><br><br></div>
+            <div class="card"><strong>Samedi</strong><br><br></div>
+            <div class="card"><strong>Dimanche</strong><br><br></div>
+        </div>
+    </section>
+
+    <footer>© 2025 TulipeRouge69</footer>
+
+    <!-- Script pour menu -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('sideMenu');
+            menu.classList.toggle('show');
+        }
+
+        // Fermer le menu si on clique en dehors
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('sideMenu');
+            const burger = document.querySelector('.burger');
+            if (!menu.contains(event.target) && !burger.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+
+</body>
+</html>
