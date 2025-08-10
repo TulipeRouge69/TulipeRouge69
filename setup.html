@@ -27,6 +27,45 @@
         .setup-container li {
             margin-bottom: 10px;
         }
+
+        /* Ajustement bannière */
+        .top-banner {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 20px;
+            height: 60px;
+            box-sizing: border-box;
+
+            /* Style identique à style.css */
+            font-size: 1.5em;
+            font-weight: bold;
+            letter-spacing: 1px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+
+            background: linear-gradient(90deg, rgba(108, 71, 255, 0.5), rgba(36, 36, 62, 0.5));
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 50px;
+            box-shadow: 0 0 10px rgba(108, 71, 255, 0.8),
+                        0 0 20px rgba(108, 71, 255, 0.6),
+                        0 0 40px rgba(108, 71, 255, 0.4);
+            margin: 10px;
+        }
+        .top-banner a.btn {
+            padding: 6px 12px;
+            font-size: 1em;
+            line-height: 1;
+            height: auto;
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            background: #6c47ff;
+            color: white;
+            border-radius: 8px;
+        }
     </style>
 </head>
 <body>
@@ -52,4 +91,3 @@
 
 </body>
 </html>
-
