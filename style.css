@@ -5,21 +5,32 @@ body {
     color: white;
 }
 
-/* Bannière arrondie et floutée */
 .top-banner {
-    background: rgba(108, 71, 255, 0.3);
-    padding: 15px;
-    text-align: left;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
     font-size: 1.5em;
     font-weight: bold;
     letter-spacing: 1px;
-    display: flex;
-    align-items: center;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 15px;
+
+    /* Dégradé transparent + flou */
+    background: linear-gradient(90deg, rgba(108, 71, 255, 0.5), rgba(36, 36, 62, 0.5));
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    /* Bords arrondis */
+    border-radius: 50px;
+
+    /* Contour lumineux violet néon */
+    box-shadow: 0 0 10px rgba(108, 71, 255, 0.8),
+                0 0 20px rgba(108, 71, 255, 0.6),
+                0 0 40px rgba(108, 71, 255, 0.4);
+
+    /* Espace autour pour voir l’arrondi */
     margin: 10px;
-    box-shadow: 0 0 15px rgba(108, 71, 255, 0.6);
 }
 
 .burger {
@@ -28,7 +39,6 @@ body {
     cursor: pointer;
     margin-right: 15px;
 }
-
 .burger-line {
     width: 25px;
     height: 4px;
@@ -36,25 +46,21 @@ body {
     border-radius: 10px;
     margin: 4px 0;
 }
-
 header {
     background-color: #1b1b3a;
     padding: 30px 20px;
     text-align: center;
 }
-
 header h1 {
     font-size: 2.2em;
     margin-bottom: 10px;
 }
-
 .content {
     text-align: center;
     padding: 40px 20px;
 }
-
-/* Boutons avec effet néon */
 .btn {
+    background: #6c47ff;
     border: none;
     color: white;
     padding: 12px 24px;
@@ -65,54 +71,27 @@ header h1 {
     align-items: center;
     gap: 8px;
     font-size: 1em;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 10px rgba(255,255,255,0.3);
 }
-
 .btn img {
     width: 20px;
     height: 20px;
 }
-
-/* Twitch */
-.btn#twitch {
-    background: #6c47ff;
-    box-shadow: 0 0 10px #6c47ff, 0 0 20px #6c47ff;
-}
-.btn#twitch:hover {
-    box-shadow: 0 0 20px #6c47ff, 0 0 40px #6c47ff;
-}
-
-/* Discord */
 .btn.discord {
     background: #5865F2;
-    box-shadow: 0 0 10px #5865F2, 0 0 20px #5865F2;
 }
-.btn.discord:hover {
-    box-shadow: 0 0 20px #5865F2, 0 0 40px #5865F2;
-}
-
-/* YouTube */
 .btn.youtube {
     background: #c4302b;
-    box-shadow: 0 0 10px #c4302b, 0 0 20px #c4302b;
 }
 .btn.youtube:hover {
     background: #a3201c;
-    box-shadow: 0 0 20px #c4302b, 0 0 40px #c4302b;
 }
-
-/* Twitter */
 .btn.twitter {
     background: #1A8CD8;
     padding: 12px 35px;
-    box-shadow: 0 0 10px #1A8CD8, 0 0 20px #1A8CD8;
 }
 .btn.twitter:hover {
     background: #0d8ddb;
-    box-shadow: 0 0 20px #1A8CD8, 0 0 40px #1A8CD8;
 }
-
 .stats, .planning {
     display: flex;
     justify-content: center;
@@ -120,25 +99,21 @@ header h1 {
     flex-wrap: wrap;
     margin: 30px 0;
 }
-
 .card {
     background: rgba(255, 255, 255, 0.05);
     padding: 20px;
     border-radius: 12px;
     min-width: 150px;
 }
-
 .planning .card {
     min-width: 200px;
 }
-
 footer {
     text-align: center;
     padding: 20px;
     font-size: 0.8em;
     background: #111;
 }
-
 .side-menu {
     position: fixed;
     top: 0;
@@ -151,28 +126,23 @@ footer {
     transition: left 0.3s ease;
     z-index: 1000;
 }
-
 .side-menu ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
-
 .side-menu ul li {
     padding: 15px 20px;
     border-bottom: 1px solid #333;
 }
-
 .side-menu ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
-
 .side-menu.show {
     left: 0;
 }
-
 .card.active-day {
     background-color: #6c47ff;
     color: white;
