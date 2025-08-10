@@ -1,20 +1,33 @@
-
 body {
     font-family: 'Segoe UI', sans-serif;
     margin: 0;
     background: linear-gradient(180deg, #0f0c29, #302b63, #24243e);
     color: white;
 }
+
 .top-banner {
-    background-color: #6c47ff;
-    padding: 15px;
-    text-align: left;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
     font-size: 1.5em;
     font-weight: bold;
     letter-spacing: 1px;
-    display: flex;
-    align-items: center;
+
+    /* Dégradé transparent + flou */
+    background: linear-gradient(90deg, rgba(108, 71, 255, 0.5), rgba(36, 36, 62, 0.5));
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    /* Bords arrondis */
+    border-radius: 50px;
+
+    /* Espace autour pour bien voir l'arrondi */
+    margin: 10px;
 }
+
 .burger {
     display: inline-block;
     vertical-align: middle;
