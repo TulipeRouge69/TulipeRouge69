@@ -125,6 +125,11 @@ footer {
     padding-top: 60px;
     transition: left 0.3s ease;
     z-index: 1000;
+
+    border-radius: 20px;
+    box-shadow: 0 0 10px #6c47ff,
+                0 0 20px #6c47ff,
+                0 0 40px #6c47ff;
 }
 .side-menu ul {
     list-style: none;
