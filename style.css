@@ -24,7 +24,12 @@ body {
     /* Bords arrondis */
     border-radius: 50px;
 
-    /* Espace autour pour bien voir l'arrondi */
+    /* Contour lumineux violet néon */
+    box-shadow: 0 0 10px rgba(108, 71, 255, 0.8),
+                0 0 20px rgba(108, 71, 255, 0.6),
+                0 0 40px rgba(108, 71, 255, 0.4);
+
+    /* Espace autour pour voir l’arrondi */
     margin: 10px;
 }
 
