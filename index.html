@@ -50,14 +50,16 @@
         font-weight: bold;
       }
 
-      /* Bannière transparente avec flou */
+      /* Bannière transparente avec flou, bords ronds, hauteur réduite, et espace au-dessus */
       .top-banner {
         position: fixed;
-        top: 0; left: 0; right: 0;
-        height: 50px;
-        background: transparent;
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
+        top: 5px; /* petit espace au-dessus */
+        left: 10px; 
+        right: 10px;
+        height: 45px; /* un peu plus courte */
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: saturate(180%) blur(20px);
+        -webkit-backdrop-filter: saturate(180%) blur(20px);
         display: flex;
         align-items: center;
         padding: 0 20px;
@@ -65,6 +67,9 @@
         font-weight: bold;
         z-index: 20;
         gap: 10px;
+        border-radius: 25px; /* bords arrondis */
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
       }
 
       .burger {
