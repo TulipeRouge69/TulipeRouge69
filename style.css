@@ -1,90 +1,178 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Mon Setup - TulipeRouge69</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .setup-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            padding: 40px 20px;
-        }
-        .setup-container img {
-            max-width: 250px;
-            height: auto;
-            border-radius: 12px;
-        }
-        .setup-container ul {
-            text-align: left;
-            max-width: 600px;
-            margin: 0;
-            padding: 0;
-        }
-        .setup-container li {
-            margin-bottom: 10px;
-        }
+body {
+    margin: 0;
+    background: url('Salle de jeu néon dynamique.png') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    font-family: Arial, sans-serif;
+}
 
-        .top-banner {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            padding: 5px 20px;
-            height: 60px;
-            box-sizing: border-box;
-            font-size: 1.5em;
-            font-weight: bold;
-            letter-spacing: 1px;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background: linear-gradient(90deg, rgba(108, 71, 255, 0.5), rgba(36, 36, 62, 0.5));
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 50px;
-            box-shadow: 0 0 10px rgba(108, 71, 255, 0.8),
-                        0 0 20px rgba(108, 71, 255, 0.6),
-                        0 0 40px rgba(108, 71, 255, 0.4);
-            margin: 10px;
-        }
-        .top-banner a.btn {
-            padding: 6px 12px;
-            font-size: 1em;
-            line-height: 1;
-            height: auto;
-            display: inline-flex;
-            align-items: center;
-            text-decoration: none;
-            background: #6c47ff;
-            color: white;
-            border-radius: 8px;
-        }
-    </style>
-</head>
-<body>
+/* Conteneurs avec fond semi-transparent pour lecture */
+.content, header {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+}
 
-    <div class="top-banner">
-        <a href="index.html" class="btn">← Retour</a>
-        <img src="thumbnail.png" alt="Logo" style="height: 40px; border-radius: 50%;">
-        Mon Setup
-    </div>
+/* Texte centré dans le header */
+header p:first-of-type {
+    text-align: center;
+    margin: 0 0 10px 0;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+header p {
+    text-align: center;
+    margin: 8px 0;
+}
 
-    <section class="setup-container">
-        <img src="pc.png" alt="PC Gamer">
-        <ul>
-            <li><strong>PC :</strong> AMD Ryzen 5 5600G, AMD Radeon RX 7600, 32Go RAM 3200Mhz</li>
-            <li><strong>Écran :</strong> 180Hz 27", 60Hz 24"</li>
-            <li><strong>Clavier :</strong> Corsair K55</li>
-            <li><strong>Souris :</strong> Glab</li>
-            <li><strong>Micro :</strong></li>
-            <li><strong>Caméra :</strong> Creative live 1080p 60Fps</li>
-        </ul>
-    </section>
+/* Side menu */
+.side-menu {
+    position: fixed;
+    left: 0; top: 0; bottom: 0;
+    background: rgba(0,0,0,0.7);
+    width: 200px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    color: white;
+    padding-top: 50px;
+    z-index: 10;
+}
+.side-menu.show {
+    transform: translateX(0);
+}
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+}
+.side-menu ul li {
+    margin: 20px 0;
+}
+.side-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-    <footer>© 2025 TulipeRouge69</footer>
+/* Bannière fixe en haut avec bords arrondis, flou, transparence, petits espaces */
+.top-banner {
+    position: fixed;
+    top: 8px;
+    left: 10px;
+    right: 10px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border-radius: 20px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    background-image: linear-gradient(135deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0) 80%);
+    margin: 0;
+    z-index: 100;
+}
 
-</body>
-</html>
+/* Logo dans la bannière */
+.logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Burger menu dans la bannière */
+.burger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-right: 10px;
+}
+
+.burger-line {
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+}
+
+/* Header : décalage pour bannière */
+header {
+    margin-top: 60px;
+}
+
+/* Boutons sociaux */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 5px;
+    padding: 8px 15px;
+    background: #9146FF;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.btn.discord {
+    background: #5865F2;
+}
+
+.btn.youtube {
+    background: #c4302b;
+}
+
+.btn.youtube:hover {
+    background: #a3201c;
+}
+
+.btn.twitter {
+    background: #1A8CD8;
+    padding: 12px 35px;
+}
+
+.btn.twitter:hover {
+    background: #0d8ddb;
+}
+
+/* Stats et planning */
+.stats, .planning {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background: rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 15px;
+    flex: 1 1 120px;
+    text-align: center;
+}
+
+.active-day {
+    border: 2px solid #9146FF;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin: 40px 0 20px;
+    color: white;
+    opacity: 0.7;
+}
