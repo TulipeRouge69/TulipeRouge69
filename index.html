@@ -4,6 +4,128 @@
     <meta charset="UTF-8">
     <title>TulipeRouge69</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+      /* Fond fixe */
+      body {
+        margin: 0;
+        background: url('Salle de jeu néon dynamique.png') no-repeat center center fixed;
+        background-size: cover;
+        color: white;
+        font-family: Arial, sans-serif;
+      }
+
+      /* Laisser le scroll possible */
+      .content, header {
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 15px;
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 900px;
+      }
+
+      /* Side menu, bannière et autres styles existants */
+      .side-menu {
+        position: fixed;
+        left: 0; top: 0; bottom: 0;
+        background: rgba(0,0,0,0.7);
+        width: 200px;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        color: white;
+        padding-top: 50px;
+        z-index: 10;
+      }
+      .side-menu.show {
+        transform: translateX(0);
+      }
+      .side-menu ul {
+        list-style: none;
+        padding: 0;
+      }
+      .side-menu ul li {
+        margin: 20px 0;
+      }
+      .side-menu ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .top-banner {
+        position: fixed;
+        top: 0; left: 0; right: 0;
+        height: 50px;
+        background: rgba(0,0,0,0.7);
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        color: white;
+        font-weight: bold;
+        z-index: 20;
+        gap: 10px;
+      }
+
+      .burger {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+      .burger-line {
+        width: 25px;
+        height: 3px;
+        background: white;
+        border-radius: 2px;
+      }
+
+      header {
+        margin-top: 70px; /* pour ne pas être sous la top-banner */
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 5px;
+        padding: 8px 15px;
+        background: #9146FF;
+        border-radius: 8px;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .btn img {
+        width: 20px;
+        height: 20px;
+      }
+
+      .stats, .planning {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .card {
+        background: rgba(255,255,255,0.1);
+        border-radius: 12px;
+        padding: 15px;
+        flex: 1 1 120px;
+        text-align: center;
+      }
+
+      .active-day {
+        border: 2px solid #9146FF;
+      }
+
+      footer {
+        text-align: center;
+        margin: 40px 0 20px;
+        color: white;
+        opacity: 0.7;
+      }
+    </style>
 </head>
 <body>
 
@@ -14,86 +136,80 @@
     </ul>
   </div>
    
-    <div class="top-banner">
-        <div class="burger" onclick="toggleMenu()">
-            <div class="burger-line"></div>
-            <div class="burger-line"></div>
-            <div class="burger-line"></div>
-        </div>
-        <img src="thumbnail.png" alt="Logo" style="height: 40px; margin-right: 10px; border-radius: 50%;">
-        TulipeRouge69
-    </div>
+  <div class="top-banner">
+      <div class="burger" onclick="toggleMenu()">
+          <div class="burger-line"></div>
+          <div class="burger-line"></div>
+          <div class="burger-line"></div>
+      </div>
+      <img src="thumbnail.png" alt="Logo" style="height: 40px; margin-right: 10px; border-radius: 50%;">
+      TulipeRouge69
+  </div>
 
-    <!-- Image gamer en pleine largeur -->
-    <img src="Salle de jeu néon dynamique.png" 
-     alt="Salle de jeu néon dynamique" 
-     style="width: 100%; border-radius: 30px;">
+  <header>
+      <p>Gaming • Divertissement • Communauté</p>
+      <p><strong>viewers actuellement en ligne :</strong></p>
 
+      <a class="btn" id="twitch" href="https://www.twitch.tv/TulipeRouge69" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968819.png" alt="Twitch"> Suivre sur Twitch
+      </a>
+      <a class="btn discord" id="discord" href="https://discord.gg/FfvmxWk7" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/3670/3670157.png" alt="Discord"> Rejoindre le Discord
+      </a>
+      <a class="btn youtube" id="youtube" href="https://www.youtube.com/@TulipeRouge69" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"> Suivre sur YouTube
+      </a>
+      <a class="btn twitter" href="https://x.com/TulipeRouge69" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"> Suivre sur Twitter
+      </a>
+  </header>
 
-    <header>
-        <p>Gaming • Divertissement • Communauté</p>
-        <p><strong>viewers actuellement en ligne :</strong></p>
+  <section class="content" id="planning">
+      <h2>Statut de la chaîne</h2>
+      <div class="stats">
+          <div class="card"><strong>Followers</strong><br>5</div>
+          <div class="card"><strong>Viewers moyens</strong><br>4</div>
+          <div class="card"><strong>Heures streamées</strong><br>Inconnu</div>
+      </div>
 
-        <a class="btn" id="twitch" href="https://www.twitch.tv/TulipeRouge69" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968819.png" alt="Twitch"> Suivre sur Twitch
-        </a>
-        <a class="btn discord" id="discord" href="https://discord.gg/FfvmxWk7" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/3670/3670157.png" alt="Discord"> Rejoindre le Discord
-        </a>
-        <a class="btn youtube" id="youtube" href="https://www.youtube.com/@TulipeRouge69" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"> Suivre sur YouTube
-        </a>
-        <a class="btn twitter" href="https://x.com/TulipeRouge69" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"> Suivre sur Twitter
-        </a>
-    </header>
+      <h2>Planning des streams</h2>
+      <div class="planning">
+          <div class="card"><strong>Lundi</strong><br><br></div>
+          <div class="card"><strong>Mardi</strong><br><br></div>
+          <div class="card"><strong>Mercredi</strong><br>16h<br>Fortnite</div>
+          <div class="card"><strong>Jeudi</strong><br><br></div>
+          <div class="card"><strong>Vendredi</strong><br><br></div>
+          <div class="card"><strong>Samedi</strong><br><br></div>
+          <div class="card"><strong>Dimanche</strong><br><br></div>
+      </div>
+  </section>
 
-    <section class="content" id="planning">
-        <h2>Statut de la chaîne</h2>
-        <div class="stats">
-            <div class="card"><strong>Followers</strong><br>5</div>
-            <div class="card"><strong>Viewers moyens</strong><br>4</div>
-            <div class="card"><strong>Heures streamées</strong><br>Inconnu</div>
-        </div>
+  <footer>© 2025 TulipeRouge69</footer>
 
-        <h2>Planning des streams</h2>
-        <div class="planning">
-            <div class="card"><strong>Lundi</strong><br><br></div>
-            <div class="card"><strong>Mardi</strong><br><br></div>
-            <div class="card"><strong>Mercredi</strong><br>16h<br>Fortnite</div>
-            <div class="card"><strong>Jeudi</strong><br><br></div>
-            <div class="card"><strong>Vendredi</strong><br><br></div>
-            <div class="card"><strong>Samedi</strong><br><br></div>
-            <div class="card"><strong>Dimanche</strong><br><br></div>
-        </div>
-    </section>
+  <script>
+      function toggleMenu() {
+          const menu = document.getElementById('sideMenu');
+          menu.classList.toggle('show');
+      }
 
-    <footer>© 2025 TulipeRouge69</footer>
+      document.addEventListener('click', function(event) {
+          const menu = document.getElementById('sideMenu');
+          const burger = document.querySelector('.burger');
+          if (!menu.contains(event.target) && !burger.contains(event.target)) {
+              menu.classList.remove('show');
+          }
+      });
 
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById('sideMenu');
-            menu.classList.toggle('show');
-        }
+      const days = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
+      const today = new Date().getDay();
+      const cards = document.querySelectorAll('.planning .card');
 
-        document.addEventListener('click', function(event) {
-            const menu = document.getElementById('sideMenu');
-            const burger = document.querySelector('.burger');
-            if (!menu.contains(event.target) && !burger.contains(event.target)) {
-                menu.classList.remove('show');
-            }
-        });
-
-        const days = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
-        const today = new Date().getDay();
-        const cards = document.querySelectorAll('.planning .card');
-
-        cards.forEach(card => {
-            if (card.textContent.includes(days[today])) {
-                card.classList.add('active-day');
-            }
-        });
-    </script>
+      cards.forEach(card => {
+          if (card.textContent.includes(days[today])) {
+              card.classList.add('active-day');
+          }
+      });
+  </script>
 
 </body>
 </html>
