@@ -11,26 +11,22 @@ body {
     z-index: 100;
     display: flex;
     align-items: center;
-    gap: 12px; /* espace entre le logo et le texte */
+    gap: 12px;
     padding: 12px 20px;
     font-size: 1.5em;
     font-weight: bold;
     letter-spacing: 1px;
 
-    /* Dégradé transparent + flou */
-    background: linear-gradient(90deg, rgba(108, 71, 255, 0.5), rgba(36, 36, 62, 0.5));
+    background: rgba(36, 36, 62, 0.5); /* couleur semi-transparente */
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
 
-    /* Bords arrondis */
     border-radius: 50px;
 
-    /* Contour lumineux violet néon */
     box-shadow: 0 0 10px rgba(108, 71, 255, 0.8),
                 0 0 20px rgba(108, 71, 255, 0.6),
                 0 0 40px rgba(108, 71, 255, 0.4);
 
-    /* Espace autour pour voir l’arrondi */
     margin: 10px;
 }
 
