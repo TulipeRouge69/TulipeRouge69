@@ -17,16 +17,19 @@ body {
     font-weight: bold;
     letter-spacing: 1px;
 
-    background: rgba(36, 36, 62, 0.5); /* couleur semi-transparente */
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.15); /* fond très clair et transparent */
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
 
     border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* fine bordure blanche translucide */
 
-    box-shadow: 0 0 10px rgba(108, 71, 255, 0.8),
-                0 0 20px rgba(108, 71, 255, 0.6),
-                0 0 40px rgba(108, 71, 255, 0.4);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 
+    /* ajout d’un léger reflet */
+    background-image:
+        linear-gradient(135deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0) 80%);
+    
     margin: 10px;
 }
 
