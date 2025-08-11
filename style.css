@@ -3,6 +3,7 @@ body {
     margin: 0;
     background: linear-gradient(180deg, #0f0c29, #302b63, #24243e);
     color: white;
+    overflow-x: hidden;
 }
 
 .top-banner {
@@ -11,26 +12,22 @@ body {
     z-index: 100;
     display: flex;
     align-items: center;
-    gap: 12px; /* espace entre le logo et le texte */
+    gap: 12px;
     padding: 12px 20px;
     font-size: 1.5em;
     font-weight: bold;
     letter-spacing: 1px;
 
-    /* Dégradé transparent + flou */
     background: linear-gradient(90deg, rgba(108, 71, 255, 0.5), rgba(36, 36, 62, 0.5));
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
 
-    /* Bords arrondis */
     border-radius: 50px;
 
-    /* Contour lumineux violet néon */
     box-shadow: 0 0 10px rgba(108, 71, 255, 0.8),
                 0 0 20px rgba(108, 71, 255, 0.6),
                 0 0 40px rgba(108, 71, 255, 0.4);
 
-    /* Espace autour pour voir l’arrondi */
     margin: 10px;
 }
 
@@ -42,11 +39,8 @@ body {
 }
 
 .burger {
-    display: inline-block;
-    vertical-align: middle;
     cursor: pointer;
     margin-right: 15px;
-    /* flex direction colonne + gap réduit */
     display: flex;
     flex-direction: column;
     gap: 3px; /* réduit l’espace entre les barres */
@@ -57,7 +51,7 @@ body {
     height: 4px;
     background-color: white;
     border-radius: 10px;
-    margin: 0; /* supprime margin vertical */
+    margin: 0;
 }
 
 header {
@@ -65,14 +59,18 @@ header {
     padding: 30px 20px;
     text-align: center;
 }
+
 header h1 {
     font-size: 2.2em;
     margin-bottom: 10px;
 }
+
 .content {
     text-align: center;
     padding: 40px 20px;
+    margin-bottom: 40px; /* espace entre sections */
 }
+
 .btn {
     background: #6c47ff;
     border: none;
@@ -86,27 +84,34 @@ header h1 {
     gap: 8px;
     font-size: 1em;
 }
+
 .btn img {
-    width: 12px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     object-fit: contain;
 }
+
 .btn.discord {
     background: #5865F2;
 }
+
 .btn.youtube {
     background: #c4302b;
 }
+
 .btn.youtube:hover {
     background: #a3201c;
 }
+
 .btn.twitter {
     background: #1A8CD8;
-    padding: 12px 24px;
+    padding: 12px 35px;
 }
+
 .btn.twitter:hover {
     background: #0d8ddb;
 }
+
 .stats, .planning {
     display: flex;
     justify-content: center;
@@ -114,21 +119,25 @@ header h1 {
     flex-wrap: wrap;
     margin: 30px 0;
 }
+
 .card {
     background: rgba(255, 255, 255, 0.05);
     padding: 20px;
     border-radius: 12px;
     min-width: 150px;
 }
+
 .planning .card {
     min-width: 200px;
 }
+
 footer {
     text-align: center;
     padding: 20px;
     font-size: 0.8em;
     background: #111;
 }
+
 .side-menu {
     position: fixed;
     top: 0;
@@ -146,23 +155,28 @@ footer {
                 0 0 20px #6c47ff,
                 0 0 40px #6c47ff;
 }
+
 .side-menu ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
+
 .side-menu ul li {
     padding: 15px 20px;
     border-bottom: 1px solid #333;
 }
+
 .side-menu ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
+
 .side-menu.show {
     left: 0;
 }
+
 .card.active-day {
     background-color: #6c47ff;
     color: white;
