@@ -22,6 +22,12 @@
         max-width: 900px;
       }
 
+      /* Centrer le texte du premier paragraphe dans header */
+      header p:first-of-type {
+        text-align: center;
+        margin: 0 0 10px 0;
+      }
+
       /* Side menu */
       .side-menu {
         position: fixed;
@@ -50,16 +56,14 @@
         font-weight: bold;
       }
 
-      /* Bannière transparente avec flou, bords ronds, hauteur réduite, et espace au-dessus */
+      /* Bannière transparente avec flou */
       .top-banner {
         position: fixed;
-        top: 5px; /* petit espace au-dessus */
-        left: 10px; 
-        right: 10px;
-        height: 45px; /* un peu plus courte */
-        background: rgba(255, 255, 255, 0.15);
-        backdrop-filter: saturate(180%) blur(20px);
-        -webkit-backdrop-filter: saturate(180%) blur(20px);
+        top: 0; left: 0; right: 0;
+        height: 50px;
+        background: transparent;
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
         display: flex;
         align-items: center;
         padding: 0 20px;
@@ -67,9 +71,6 @@
         font-weight: bold;
         z-index: 20;
         gap: 10px;
-        border-radius: 25px; /* bords arrondis */
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
       }
 
       .burger {
@@ -183,7 +184,7 @@
       <div class="planning">
           <div class="card"><strong>Lundi</strong><br><br></div>
           <div class="card"><strong>Mardi</strong><br><br></div>
-          <div class="card"><strong>Mercredi</strong><br>16h<br>Fortnite</div>
+          <div class="card active-day"><strong>Mercredi</strong><br>16h<br>Fortnite</div>
           <div class="card"><strong>Jeudi</strong><br><br></div>
           <div class="card"><strong>Vendredi</strong><br><br></div>
           <div class="card"><strong>Samedi</strong><br><br></div>
@@ -204,16 +205,6 @@
           const burger = document.querySelector('.burger');
           if (!menu.contains(event.target) && !burger.contains(event.target)) {
               menu.classList.remove('show');
-          }
-      });
-
-      const days = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
-      const today = new Date().getDay();
-      const cards = document.querySelectorAll('.planning .card');
-
-      cards.forEach(card => {
-          if (card.textContent.includes(days[today])) {
-              card.classList.add('active-day');
           }
       });
   </script>
