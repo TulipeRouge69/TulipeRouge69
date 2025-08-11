@@ -46,14 +46,20 @@ body {
     vertical-align: middle;
     cursor: pointer;
     margin-right: 15px;
+    /* flex direction colonne + gap réduit */
+    display: flex;
+    flex-direction: column;
+    gap: 3px; /* réduit l’espace entre les barres */
 }
+
 .burger-line {
     width: 25px;
     height: 4px;
     background-color: white;
     border-radius: 10px;
-    margin: 4px 0;
+    margin: 0; /* supprime margin vertical */
 }
+
 header {
     background-color: #1b1b3a;
     padding: 30px 20px;
@@ -83,6 +89,7 @@ header h1 {
 .btn img {
     width: 20px;
     height: 20px;
+    object-fit: contain;
 }
 .btn.discord {
     background: #5865F2;
