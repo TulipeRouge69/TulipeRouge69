@@ -7,12 +7,12 @@ body {
 
 .top-banner {
     position: fixed;
-    top: 8px;        /* espace au-dessus */
-    left: 10px;      /* petit décalage gauche */
-    right: 10px;     /* petit décalage droite */
-    height: 40px;    /* hauteur réduite */
-    border-radius: 20px; /* bords ronds */
-    padding: 0 20px; /* garde un peu d'espace horizontal */
+    top: 8px;
+    left: 10px;
+    right: 10px;
+    height: 40px;
+    border-radius: 20px;
+    padding: 0 20px;
     display: flex;
     align-items: center;
     gap: 12px;
@@ -29,8 +29,6 @@ body {
     z-index: 100;
 }
 
-
-
 .top-banner .logo {
     width: 50px;
     height: 50px;
@@ -39,8 +37,6 @@ body {
 }
 
 .burger {
-    display: inline-block;
-    vertical-align: middle;
     cursor: pointer;
     margin-right: 15px;
     display: flex;
@@ -84,6 +80,8 @@ header h1 {
     align-items: center;
     gap: 8px;
     font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
 
 .btn img {
@@ -132,6 +130,12 @@ header h1 {
     min-width: 200px;
 }
 
+.card.active-day {
+    background-color: #6c47ff;
+    color: white;
+    font-weight: bold;
+}
+
 footer {
     text-align: center;
     padding: 20px;
@@ -150,11 +154,11 @@ footer {
     padding-top: 60px;
     transition: left 0.3s ease;
     z-index: 1000;
-
     border-radius: 20px;
-    box-shadow: 0 0 10px #6c47ff,
-                0 0 20px #6c47ff,
-                0 0 40px #6c47ff;
+    box-shadow:
+        0 0 10px #6c47ff,
+        0 0 20px #6c47ff,
+        0 0 40px #6c47ff;
 }
 
 .side-menu ul {
@@ -176,10 +180,4 @@ footer {
 
 .side-menu.show {
     left: 0;
-}
-
-.card.active-day {
-    background-color: #6c47ff;
-    color: white;
-    font-weight: bold;
 }
