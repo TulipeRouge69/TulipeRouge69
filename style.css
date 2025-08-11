@@ -87,8 +87,8 @@ header h1 {
     font-size: 1em;
 }
 .btn img {
-    width: 20px;
-    height: 20px;
+    width: 12px;
+    height: 24px;
     object-fit: contain;
 }
 .btn.discord {
@@ -102,7 +102,7 @@ header h1 {
 }
 .btn.twitter {
     background: #1A8CD8;
-    padding: 12px 35px;
+    padding: 12px 24px;
 }
 .btn.twitter:hover {
     background: #0d8ddb;
