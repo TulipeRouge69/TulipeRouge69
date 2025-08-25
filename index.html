@@ -54,7 +54,7 @@
     <div class="planning">
       <div class="card"><strong>Lundi</strong><br><br></div>
       <div class="card"><strong>Mardi</strong><br><br></div>
-      <div class="card active-day"><strong>Mercredi</strong><br>16h<br>Fortnite</div>
+      <div class="card"><strong>Mercredi</strong><br>16h<br>Fortnite</div>
       <div class="card"><strong>Jeudi</strong><br><br></div>
       <div class="card"><strong>Vendredi</strong><br><br></div>
       <div class="card"><strong>Samedi</strong><br><br></div>
@@ -77,6 +77,14 @@
         menu.classList.remove('show');
       }
     });
+
+    // === Mise en surbrillance automatique du jour actuel ===
+    const jours = document.querySelectorAll(".planning .card");
+    let today = new Date().getDay(); // 0 = dimanche, 1 = lundi...
+    let index = (today === 0) ? 6 : today - 1; // recaler pour que lundi = index 0
+    if (jours[index]) {
+      jours[index].classList.add("active-day");
+    }
   </script>
 
 </body>
