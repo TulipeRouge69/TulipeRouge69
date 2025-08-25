@@ -55,7 +55,7 @@ header p {
     font-weight: bold;
 }
 
-/* Bannière fixe en haut avec bords arrondis, flou, transparence, petits espaces */
+/* Bannière fixe en haut */
 .top-banner {
     position: fixed;
     top: 8px;
@@ -88,7 +88,7 @@ header p {
     object-fit: cover;
 }
 
-/* Burger menu dans la bannière */
+/* Burger menu */
 .burger {
     cursor: pointer;
     display: flex;
@@ -96,7 +96,6 @@ header p {
     gap: 5px;
     margin-right: 10px;
 }
-
 .burger-line {
     width: 25px;
     height: 3px;
@@ -104,7 +103,7 @@ header p {
     border-radius: 2px;
 }
 
-/* Header : décalage pour bannière */
+/* Décalage du header */
 header {
     margin-top: 60px;
 }
@@ -122,29 +121,23 @@ header {
     text-decoration: none;
     font-weight: bold;
 }
-
 .btn img {
     width: 20px;
     height: 20px;
 }
-
 .btn.discord {
     background: #5865F2;
 }
-
 .btn.youtube {
     background: #c4302b;
 }
-
 .btn.youtube:hover {
     background: #a3201c;
 }
-
 .btn.twitter {
     background: #1A8CD8;
     padding: 12px 35px;
 }
-
 .btn.twitter:hover {
     background: #0d8ddb;
 }
@@ -156,7 +149,6 @@ header {
     flex-wrap: wrap;
     justify-content: center;
 }
-
 .card {
     background: rgba(255,255,255,0.1);
     border-radius: 12px;
@@ -165,8 +157,21 @@ header {
     text-align: center;
 }
 
+/* Style du jour actif */
 .active-day {
-    border: 2px solid #9146FF;
+    background: linear-gradient(135deg, #6a00ff, #9d4edd);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(145, 70, 255, 0.7);
+    animation: pulse 2s infinite;
+}
+
+/* Animation pour effet gamer */
+@keyframes pulse {
+    0% { box-shadow: 0 0 10px rgba(145, 70, 255, 0.6); }
+    50% { box-shadow: 0 0 25px rgba(145, 70, 255, 1); }
+    100% { box-shadow: 0 0 10px rgba(145, 70, 255, 0.6); }
 }
 
 /* Footer */
