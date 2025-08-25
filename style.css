@@ -105,8 +105,8 @@ header p {
 
 /* Décalage du header + espace avant le planning */
 header {
-    margin-top: 60px;
-    margin-bottom: 80px; /* <-- Ajout d'espace pour voir le fond */
+    margin-top: 100px;
+    margin-bottom: 120px; /* <-- Ajout d'espace pour voir le fond */
 }
 
 /* Boutons sociaux */
